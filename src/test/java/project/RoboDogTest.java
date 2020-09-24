@@ -39,4 +39,6 @@ public class RoboDogTest {
         assertEquals(currentPerformanceLevel, 6);
         assertEquals(currentOilLevel, 5);
     }
+
+
 }

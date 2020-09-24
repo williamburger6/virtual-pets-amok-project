@@ -6,13 +6,15 @@ public class Dog {
     private int hungerLevel;
     private int thirstLevel;
     private int boredomLevel;
+    private int healthLevel;
 
-    public Dog(String name, String description, int hungerLevel, int thirstLevel, int boredomLevel) {
+    public Dog(String name, String description, int hungerLevel, int thirstLevel, int boredomLevel, int healthLevel) {
         this.name = name;
         this.description = description;
         this.hungerLevel = hungerLevel;
         this.thirstLevel = thirstLevel;
         this.boredomLevel = boredomLevel;
+        this.healthLevel = healthLevel;
     }
 
     public String getName(){
@@ -25,6 +27,7 @@ public class Dog {
 
     public void feedPet() {
         hungerLevel -=3;
+        healthLevel -=1;
     }
 
     public int getHunger() {
@@ -33,6 +36,7 @@ public class Dog {
 
     public void waterPet() {
         thirstLevel -=3;
+        healthLevel -=1;
     }
 
     public int getThirst() {
@@ -41,15 +45,19 @@ public class Dog {
 
     public void playPet() {
         boredomLevel -=3;
+        healthLevel -=1;
     }
 
     public int getBoredom() {
         return boredomLevel;
     }
 
+    public int getHealth() {return healthLevel;}
+
     public void walkPet(){
         boredomLevel =0;
         thirstLevel +=2;
         hungerLevel +=1;
+        healthLevel -=1;
     }
 }
