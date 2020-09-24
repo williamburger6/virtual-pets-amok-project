@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class RoboDogTest {
+public class RoboCatTest {
 
-    RoboDog underTest = new RoboDog ("Buster","friendly",4,4,4);
+    RoboCat underTest = new RoboCat("Socks","timid",4,4,4);
 
     @Test
     public void shouldDecreaseFuelBy3WhenOiled(){
@@ -27,16 +27,5 @@ public class RoboDogTest {
         underTest.playRoboPet();
         int currentBoredom = underTest.getBoredom();
         assertEquals(currentBoredom, 1);
-    }
-
-    @Test
-    public void shouldDecreaseBoredomTo0IncreaseOilBy1IncreasePerformanceLevelBy2WhenWalked(){
-        underTest.walkPet();
-        int currentBoredom = underTest.getBoredom();
-        int currentPerformanceLevel = underTest.getPerfomanceLevel();
-        int currentOilLevel = underTest.getOilLevel();
-        assertEquals(currentBoredom, 0);
-        assertEquals(currentPerformanceLevel, 6);
-        assertEquals(currentOilLevel, 5);
     }
 }
