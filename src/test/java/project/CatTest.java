@@ -9,7 +9,7 @@ public class CatTest {
     Cat underTest = new Cat("Lucy","mean",4,4,4,4);
 
     @Test
-    public void shouldDecreaseHungerBy3WhenFed(){
+    public void shouldDecreaseHungerBy3AndHealthBy1WhenFed(){
         underTest.feedPet();
         int currentHunger = underTest.getHunger();
         assertEquals(currentHunger, 1);
@@ -18,7 +18,7 @@ public class CatTest {
     }
 
     @Test
-    public void shouldDecreaseThirstBy3WhenWatered(){
+    public void shouldDecreaseThirstBy3AndHealthBy1WhenWatered(){
         underTest.waterPet();
         int currentThirst = underTest.getThirst();
         assertEquals(currentThirst, 1);
@@ -27,7 +27,7 @@ public class CatTest {
     }
 
     @Test
-    public void shouldDecreaseBoredomBy3WhenPlaying() {
+    public void shouldDecreaseBoredomBy3AndHealthBy1WhenPlaying() {
         underTest.playPet();
         int currentBoredom = underTest.getBoredom();
         assertEquals(currentBoredom, 1);
