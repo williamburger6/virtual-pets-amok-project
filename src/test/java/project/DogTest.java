@@ -46,4 +46,18 @@ public class DogTest {
         int currentHealth = underTest.getHealth();
         assertEquals(currentHealth,3);
     }
+
+    @Test
+    public void shouldReturnWasteOf4(){
+        int currentWaste = underTest.getWaste();
+        assertEquals(currentWaste,4);
+    }
+
+    @Test
+    public void shouldDecreaseLitterBoxLevelTo0(){
+        underTest.cleanDogCage();
+        int currentDogCageLevel = underTest.getDogCageLevel();
+        assertEquals(currentDogCageLevel,0);
+    }
+
 }

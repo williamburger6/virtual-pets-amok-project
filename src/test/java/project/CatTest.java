@@ -34,4 +34,17 @@ public class CatTest {
         int currentHealth = underTest.getHealth();
         assertEquals(currentHealth,3);
     }
+
+    @Test
+    public void shouldDecreaseLitterBoxLevelTo0(){
+        underTest.cleanLitterBox();
+        int currentLitterBoxLevel = underTest.getLitterBoxLevel();
+        assertEquals(currentLitterBoxLevel,0);
+    }
+
+    @Test
+    public void shouldReturnWasteOf4(){
+        int currentWaste = underTest.getWaste();
+        assertEquals(currentWaste,4);
+    }
 }

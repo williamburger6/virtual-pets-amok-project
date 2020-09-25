@@ -8,6 +8,7 @@ public class OrganicPet {
     protected int boredomLevel;
     protected int healthLevel;
 
+
     public OrganicPet(String name, String description, int hungerLevel, int thirstLevel, int boredomLevel, int healthLevel) {
         this.name = name;
         this.description = description;
@@ -15,6 +16,7 @@ public class OrganicPet {
         this.thirstLevel = thirstLevel;
         this.boredomLevel = boredomLevel;
         this.healthLevel = healthLevel;
+
     }
 
     public String getName() {
@@ -55,4 +57,6 @@ public class OrganicPet {
     public int getHealth() {
         return healthLevel;
     }
+
+
 }
