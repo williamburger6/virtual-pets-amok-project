@@ -47,4 +47,14 @@ public class CatTest {
         int currentWaste = underTest.getWaste();
         assertEquals(currentWaste,4);
     }
+
+    @Test
+    public void shouldRunTickReturnWasteOf4(){
+        underTest.runCatTick();
+        int currentLitterBoxLevel = underTest.getLitterBoxLevel();
+        assertEquals(currentLitterBoxLevel,4);
+    }
+
+
+
 }

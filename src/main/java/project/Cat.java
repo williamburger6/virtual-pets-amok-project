@@ -9,16 +9,21 @@ public class Cat extends OrganicPet {
 
     public int wasteLevel = healthLevel;
 
-    public int getWaste(){
+    public int getWaste() {
         return wasteLevel;
     }
 
 
-    public void cleanLitterBox(){
+    public void cleanLitterBox() {
         litterBoxLevel = 0;
     }
 
     public int getLitterBoxLevel() {
         return litterBoxLevel;
     }
+
+    public void runCatTick() {
+        litterBoxLevel = wasteLevel;
+    }
+
 }

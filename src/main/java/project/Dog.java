@@ -1,10 +1,14 @@
 package project;
 
+import java.util.Map;
+
 public class Dog extends OrganicPet {
 
     public Dog(String name, String description, int hungerLevel, int thirstLevel, int boredomLevel, int healthLevel) {
         super(name, description, hungerLevel, thirstLevel, boredomLevel, healthLevel);
     }
+
+
 
     public int dogCageLevel;
     public int wasteLevel = healthLevel;
@@ -25,6 +29,10 @@ public class Dog extends OrganicPet {
 
     public int getDogCageLevel() {
         return dogCageLevel;
+    }
+
+    public void runDogTick(){
+        dogCageLevel = wasteLevel;
     }
 
 

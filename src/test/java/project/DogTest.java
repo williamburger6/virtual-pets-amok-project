@@ -48,7 +48,7 @@ public class DogTest {
     }
 
     @Test
-    public void shouldReturnWasteOf4(){
+    public void shouldReturnWasteOf0(){
         int currentWaste = underTest.getWaste();
         assertEquals(currentWaste,4);
     }
@@ -58,6 +58,13 @@ public class DogTest {
         underTest.cleanDogCage();
         int currentDogCageLevel = underTest.getDogCageLevel();
         assertEquals(currentDogCageLevel,0);
+    }
+
+    @Test
+    public void shouldRunTickCausingWasteToBe4(){
+        underTest.runDogTick();
+        int currentDogCageLevel = underTest.getDogCageLevel();
+        assertEquals(currentDogCageLevel,4);
     }
 
 }
